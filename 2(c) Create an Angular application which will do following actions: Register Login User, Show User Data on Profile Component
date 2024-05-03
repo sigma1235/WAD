@@ -1,0 +1,152 @@
+HTML CODE:
+<h1>{{title}}</h1>
+<input type="text" #name placeholder="Enter Your Name" name="Name"> <br>
+<input type="text" #address placeholder="Enter Your Address" name="Address">
+<br>
+<input type="text" #contact placeholder="Enter Your Contact" name="Contact">
+<br>
+<input type="email" #email placeholder="Enter Your Email" name="Email"> <br>
+<input type="password" #password placeholder="Enter Your Password"
+name="Password"> <br>
+<button (click)="getValue(name.value, address.value, contact.value, 
+email.value)">Register</button>
+<h1>Your Registered Data</h1><br>
+<p>Name:{{displayname}}</p>
+<p>Address:{{displayaddress}}</p>
+<p>Contact:{{displaycontact}}</p>
+<p>Emial:{{displayemail}}</p>
+
+
+2)CSS CODE:
+input{
+width: 400px;
+height: 25px;
+margin: 10px;
+padding: 5px;
+}
+button{
+background-color:rgb(58, 57, 57); 
+padding: 8px 20px;
+border: none;
+color: rgb(252, 246, 246);
+font-size: 16px;
+border-radius: 8px;
+}     
+     3)TS CODE:
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+@Component({
+selector: 'app-root',
+standalone: true,
+imports: [RouterOutlet],
+templateUrl: './app.component.html',
+styleUrl: './app.component.css'
+})
+export class AppComponent {
+title = 'Registration Form';
+displayname='';
+displayaddress='';
+displaycontact='';
+displayemail='';
+getValue(name:string, address:string, contact: string, email:string){
+this.displayname=name;
+this.displayaddress=address;
+this.displaycontact=contact;
+this.displayemail=email;
+}
+}
+
+4)TERMINAL CMD:
+PS C:\Users\admin\Desktop\WAD2C> npm --version
+10.5.0
+PS C:\Users\admin\Desktop\WAD2C> npm install -g @angular/cli@latest
+changed 233 packages in 16s
+44 packages are looking for funding
+ run `npm fund` for details
+PS C:\Users\admin\Desktop\WAD2C> ng new part-c
+? Which stylesheet format would you like to use? CSS [
+https://developer.mozilla.org/docs/Web/CSS ]
+? Do you want to enable Server-Side Rendering (SSR) and Static Site 
+Generation 
+(SSG/Prerendering)? Yes
+CREATE part-c/angular.json (2838 bytes)
+CREATE part-c/package.json (1263 bytes)
+CREATE part-c/README.md (1086 bytes)
+CREATE part-c/tsconfig.json (889 bytes)
+CREATE part-c/.editorconfig (290 bytes)
+CREATE part-c/.gitignore (590 bytes)
+CREATE part-c/tsconfig.app.json (342 bytes)
+CREATE part-c/tsconfig.spec.json (287 bytes)
+CREATE part-c/server.ts (1759 bytes)
+CREATE part-c/.vscode/extensions.json (134 bytes)
+CREATE part-c/.vscode/launch.json (490 bytes)
+CREATE part-c/.vscode/tasks.json (980 bytes)
+CREATE part-c/src/main.ts (256 bytes)
+CREATE part-c/src/favicon.ico (15086 bytes)
+CREATE part-c/src/index.html (304 bytes)
+CREATE part-c/src/styles.css (81 bytes)
+CREATE part-c/src/main.server.ts (271 bytes)
+CREATE part-c/src/app/app.component.html (20239 bytes)
+CREATE part-c/src/app/app.component.spec.ts (945 bytes)
+CREATE part-c/src/app/app.component.ts (315 bytes)
+CREATE part-c/src/app/app.component.css (0 bytes)
+CREATE part-c/src/app/app.config.ts (330 bytes)
+CREATE part-c/src/app/app.routes.ts (80 bytes)
+CREATE part-c/src/app/app.config.server.ts (361 bytes)
+CREATE part-c/src/assets/.gitkeep (0 bytes)
+✔ Packages installed successfully.
+warning: in the working copy of 'package-lock.json', LF will be 
+replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced 
+by CRLF the next time Git touches it
+ Successfully initialized git.
+PS C:\Users\admin\Desktop\WAD2C> cd part-c
+PS C:\Users\admin\Desktop\WAD2C\part-c> ng serve
+? Would you like to share pseudonymous usage data about this project 
+with the Angular 
+Team
+at Google under Google's Privacy Policy at 
+https://policies.google.com/privacy. For more
+details and how to change this setting, see 
+https://angular.io/analytics. Yes
+Thank you for sharing pseudonymous usage data. Should you change 
+your mind, the following
+command will disable this feature entirely:
+ ng analytics disable
+Global setting: enabled
+Local setting: enabled
+Effective status: enabled
+Browser bundles
+Initial chunk files | Names | Raw size
+polyfills.js | polyfills | 83.60 kB | 
+main.js | main | 4.06 kB | 
+styles.css | styles | 95 bytes | 
+ | Initial total | 87.75 kB
+Server bundles
+Initial chunk files | Names | Raw size
+chunk-XSPF3TB6.mjs | - | 1.70 MB | 
+polyfills.server.mjs | polyfills.server | 555.05 kB | 
+main.server.mjs | main.server | 197.00 kB | 
+chunk-VPSODEBW.mjs | - | 2.51 kB | 
+render-utils.server.mjs | render-utils.server | 423 bytes | 
+Lazy chunk files | Names | Raw size
+chunk-OTT6LQ5K.mjs | xhr2 | 39.10 kB | 
+Application bundle generation complete. [4.062 seconds]
+Watch mode enabled. Watching for file changes...
+ ➜ Local: http://localhost:4200/
+ ➜ press h + enter to show help
+h
+ Shortcuts
+ press r + enter to force reload browser
+ press u + enter to show server url
+ press o + enter to open in browser
+ press c + enter to clear console
+ press q + enter to quit
+Browser bundles
+Initial chunk files | Names | Raw size
+main.js | main | 4.19 kB | 
+Server bundles
+Initial chunk files | Names | Raw size
+main.server.mjs | main.server | 197.12 kB | 
+Application bundle generation complete. [0.412 seconds]
+Page reload sent to client(s)
