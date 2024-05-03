@@ -1,0 +1,34 @@
+WAD 3-A Static website 
+
+index.html :
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node JS</title>
+  </head>
+  <body>
+    <h1>This is Static Web Page.</h1>
+  </body>
+</html>
+
+
+index.js :
+
+const express = require("express");
+const app = express();
+app.use(express.static("public"));
+app.listen(4000, () => {
+  console.log("Server is Started");
+});
+
+
+terminal commands : 
+
+	npm init
+	npm i express --save
+	node index.js
+
+
