@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Application Development</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0/jquery.mobile1.5.0.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile1.5.0.min.js"></script>
+<style>
+/* Global styles */ body { 
+font-family: Arial, sans-serif; 
+background-color: #e1fa55; 
+margin: 0; padding: 0; 
+text-align: center;
+}
+/* Header styles */ 
+header { background-color: 
+#007bff;
+color: #fff; 
+padding: 20px 0;
+}
+header h1 {
+margin: 0;
+font-size: 24px;
+}
+/* Main content styles */ 
+.content { padding: 
+20px;
+}
+.content p { 
+font-size: 50px; 
+line-height: 1.6; 
+color: #333;
+}
+/* Button styles */ 
+.button { display: inlineblock; padding: 10px 20px; 
+background-color: #007bff;
+color: #fff; text-decoration: 
+none; border-radius: 5px; 
+transition: background-color 0.3s; 
+margin-bottom: 20px;
+}
+.button:hover {
+background-color: #0056b3;
+}
+/* Footer styles */ 
+footer {
+background-color: #007bff;
+color: #fff; 
+padding: 20px 0;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Minecraft, Mojang Studios</h1>
+</header>
+<div class="content" style="display: flex; font-weight: bold;"> <p 
+style="margin: 70px;">Minecraft is a game made up of blocks, 
+creatures, and community. 
+You can survive the night or build a work of art the choice is all yours.
+But if the thought of exploring a vast new world all on your own feels overwhelming, 
+then fear not! Let's explore what Minecraft is all about!</p>
+<div>
+<img src="Minecraft Wallpaper.jpeg">
+</div>
+</div>
+<a href="#" class="button">Learn More</a>
+<footer>
+<p>&copy; 2024 Mojang Studios. All rights reserved.</p>
+</footer>
+</body>
+</html>
